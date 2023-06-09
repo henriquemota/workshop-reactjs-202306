@@ -36,14 +36,16 @@ const Footer = () => {
     <footer className='py-5 bg-dark'>
       <div className='container'>
         <div className='row'>
-          <div className='col-12 col-md'>
+          <div className='col-sm-6'>
             <img src={logo} className='img-fluid' style={{ height: 120 }} />
             <p><small className='d-block mb-3'>&copy; Infinity {new Date().getFullYear()}</small></p>
             <p>
-              Somos uma escola com metodologia americana, 100% presencial e prática, voltada à capacitação para o mercado de trabalho nas áreas criativas e de inovação. Formamos hoje as principais carreiras demandadas pelo mercado com uma experiência única de ensino.
+              Somos uma escola com metodologia americana, 100% presencial e prática, voltada à
+              capacitação para o mercado de trabalho nas áreas criativas e de inovação. Formamos
+              hoje as principais carreiras demandadas pelo mercado com uma experiência única de ensino.
             </p>
           </div>
-          <div className='col-6 col-md'>
+          <div className='col-sm-2'>
             <h5>Features</h5>
             <ul className='list-unstyled text-small'>
               <li><Link to='#'>Cool stuff</Link></li>
@@ -54,7 +56,7 @@ const Footer = () => {
               <li><Link to='#'>Last time</Link></li>
             </ul>
           </div>
-          <div className='col-6 col-md'>
+          <div className='col-sm-2'>
             <h5>Resources</h5>
             <ul className='list-unstyled text-small'>
               <li><Link to='#'>Resource name</Link></li>
@@ -63,7 +65,7 @@ const Footer = () => {
               <li><Link to='#'>Final resource</Link></li>
             </ul>
           </div>
-          <div className='col-6 col-md'>
+          <div className='col-sm-2'>
             <h5>Resources</h5>
             <ul className='list-unstyled text-small'>
               <li><Link to='#'>Business</Link></li>
@@ -72,15 +74,7 @@ const Footer = () => {
               <li><Link to='#'>Gaming</Link></li>
             </ul>
           </div>
-          <div className='col-6 col-md'>
-            <h5>About</h5>
-            <ul className='list-unstyled text-small'>
-              <li><Link to='#'>Team</Link></li>
-              <li><Link to='#'>Locations</Link></li>
-              <li><Link to='#'>Privacy</Link></li>
-              <li><Link to='#'>Terms</Link></li>
-            </ul>
-          </div>
+
         </div>
       </div>
     </footer>
