@@ -1,8 +1,8 @@
-import { Timestamp, addDoc, onSnapshot, orderBy, query } from 'firebase/firestore'
+import { Timestamp, addDoc, collection, onSnapshot } from 'firebase/firestore'
 import { db } from 'src/services'
 
 export const useBanners = () => {
-  const collection = 'banners'
+  const ref = collection(db, 'banners')
 
   const create = async (params) => {
     try {
@@ -16,12 +16,11 @@ export const useBanners = () => {
   }
   const readall = async () => {
     try {
-      const q = query(collection(db, collection), orderBy('created', 'desc'))
-      onSnapshot(q, ({ docs }) => {
-        const DATA = []
+      const DATA = []
+      onSnapshot(ref, ({ docs }) => {
         docs.forEach((doc) => DATA.push({ id: doc.id, ...doc.data() }))
-        return DATA
       })
+      return DATA
     } catch (error) {
       console.log(error)
     }

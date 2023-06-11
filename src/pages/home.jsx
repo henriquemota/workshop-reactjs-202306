@@ -3,17 +3,18 @@ import React from 'react'
 const SOURCE = 'https://infinityschool.com.br/wp-content/uploads'
 
 const Carousel = () => {
-  const BANNERS = [
+
+  const banners = [
     { title: '', url: '/2018/03/banner-digital-design2.jpg' },
     { title: '', url: '/2019/04/meta_banner.jpg' },
     { title: '', url: '/2021/09/banner_fullstack.jpg' },
     { title: '', url: '/2021/09/banner_marketing_digital.jpg' },
-
   ]
+
   return (
     <div id='carousel' className='carousel slide' data-bs-ride="true">
       <div className='carousel-indicators'>
-        {BANNERS.map((el, ix) =>
+        {banners.map((el, ix) =>
           <button
             key={ix}
             type='button'
@@ -25,7 +26,7 @@ const Carousel = () => {
         )}
       </div>
       <div className='carousel-inner'>
-        {BANNERS.map((el, ix) =>
+        {banners.map((el, ix) =>
           <div key={ix} className={`carousel-item ${ix === 0 ? 'active' : ''}`}>
             <img
               src={SOURCE.concat(el.url)}
