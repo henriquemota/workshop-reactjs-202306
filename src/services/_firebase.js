@@ -6,11 +6,11 @@ import settings from 'src/settings'
 // Your web app's Firebase configuration
 const CONFIG = {
   apiKey: settings.FIREBASE_KEY,
-  authDomain: '',
-  projectId: '',
-  storageBucket: '',
-  messagingSenderId: '',
-  appId: settings.FIREBASE_ID
+  authDomain: "workshop20230611.firebaseapp.com",
+  projectId: "workshop20230611",
+  storageBucket: "workshop20230611.appspot.com",
+  messagingSenderId: "688303938341",
+  appId: settings.FIREBASE_ID,
 }
 
 // Initialize Firebase

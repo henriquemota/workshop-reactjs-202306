@@ -77,7 +77,6 @@ const Courses = () => {
 }
 
 const Home = () => {
-
   return (
     <React.Fragment>
       <Carousel />
