@@ -18,10 +18,9 @@ export const useBanners = () => {
     try {
       const q = query(collection(db, collection), orderBy('created', 'desc'))
       onSnapshot(q, ({ docs }) => {
-        setTasks(docs.map(doc => ({
-          id: doc.id,
-          data: doc.data()
-        })))
+        const DATA = []
+        docs.forEach((doc) => DATA.push({ id: doc.id, ...doc.data() }))
+        return DATA
       })
     } catch (error) {
       console.log(error)
